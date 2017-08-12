@@ -9,6 +9,7 @@
 - [Node](#node)
 - [Angular](#angular)
 - [React](#react)
+- [Philosophy](#philosophy)
 - [FAQs](#faqs)
 
 ## Intro
@@ -216,6 +217,10 @@ console.log(typeof 'foo bar' !== number)
 - Subtraction: -
 - Division: /
 - Multiplication: *
+- Greater Than: >
+- Greater or Equal To: >=
+- Less Than: <
+- Less or Equal To: <=
 
 Modulo: % (Returns the remainder). Example:
 ```
@@ -227,10 +232,38 @@ console.log(11 % 2)
 //Outputs: 1
 ```
 
-
-
-
 ### Arrays
+
+Javascript Arrays are special objects that let you store multiple values at a time. An array can hold many values under a single variable, and you can can access the values by referring to an index number. The values kept in an array are in a specific order.
+
+You can store strings, numbers, objects, or even more arrays inside an array. You can mix and match, it doesn't matter!
+
+#### Creating an array:
+```
+let numbers_array = [1, 2, 3, 4, 5];
+let string_array = ['hi', 'my', 'name', 'is', 'wilson'];
+let array_array = [[1,2,3], ['strings', 'go', 'here']];
+let mixed_array = [
+  'strings',
+  { name: 'Taylor Swift' },
+  12345
+];
+```
+
+#### Accessing Elements of Array:
+Elements of an Array are accessible through indexes. Arrays start with a 0-index.
+
+```
+let famousPeople = ['Taylor Swift', 'Katy Perry', 'Beyonce', 'Rihanna'];
+console.log(famousPeople[0]);
+console.log(famousPeople[1]);
+console.log(famousPeople[3]);
+//Outputs: Taylor Swift
+//Outputs: Katy Perry
+//Outputs: Rihanna
+
+```
+
 
 ### Objects
 
@@ -268,6 +301,12 @@ console.log(11 % 2)
 ## Angular 2
 
 ## React
+
+## Philosophy
+
+### You spend more time maintaining code than writing it.
+
+### You write code for your future self, not your present self.
 
 ## FAQs
 
@@ -333,7 +372,46 @@ let in the loop rebinds it to each iteration of the loop, ensuring it has new va
 
 ### == vs ===
 
-Double Equal is known as abstractly equal. Where as triple equal is known as strictly equal.
+Double Equal is known as abstractly equal. Whereas triple equal is known as strictly equal. The differences summed up are basically: Abstract equality will attempt to resolve the data types via type coercion before making a comparison. Strict equality will return false if the types are different.
+
+Example:
+
+```
+console.log(3 == "3"); // true
+console.log(3 === "3"); // false.
+```
+```
+console.log(true == '1'); // true
+console.log(true === '1'); // false
+```
+
+What happens in the two examples above, is the types are converted before doing the equality check.
+
+When I mentioned pitfalls earlier, the two examples above are traps. But the bigger ones are these next two examples.
+
+```
+console.log(undefined == null); // true
+console.log(undefined === null); // false. Undefined and null are distinct types and are not interchangeable.
+```
+```
+console.log(true == 'true'); // false. A string will not be converted to a boolean and vice versa.
+console.log(true === 'true'); // false
+```
+
+#### Other Random Things
+String literals are different than String objects.
+```
+console.log("This is a string." == new String("This is a string.")); // true
+console.log("This is a string." === new String("This is a string.")); // false
+```
+
+To see why strict equality returned false, look at the next example:
+```
+console.log(typeof "This is a string."); // string
+console.log(typeof new String("This is a string.")); //object
+```
+
+Long story short, don't use `==`. Just use `===` to be able to control what you want to do. Some people try to do some ridiculously cute things with `==`, and it just makes the code very difficult to comprehend.
 
 
 ## Todo
