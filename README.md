@@ -24,7 +24,7 @@ Javascript has three different variable assigners.
 const name = 'taylor swift'
 ```
 
-####let
+#### let
 let is used when you want to assign a variable for the first time. After the variable is assigned, you can reassign without let.
 let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope.
 ```
@@ -42,7 +42,7 @@ var is very similar to let. But it defines a variable globally, regardless of bl
 var favoriteDrink = 'milk tea';
 ```
 
-To see an in-depth answer on the difference between let and var, click [here](#let-vs-var)
+To see an in-depth answer on the difference between let and var, see the FAQ.
 
 
 ### Strings
@@ -102,8 +102,11 @@ function letseethediff() {
 
 Redeclaring variable with let keyword stops us from doing so as it throws error, whereas it's fine with var.
 
+```
 let name = 'john';
 let name = 'doe'; //Uncaught SyntaxError: Identifier 'name' has already been declared
+```
+
 Another difference is visible here in the loops.
 
 ```
