@@ -18,10 +18,12 @@ The basic syntax of Javascript.
 
 Javascript has three different variable assigners.
 
-#### cons
-(short for constant) when const is used, Javascript doesn't allow for reassignment.
+#### const
+when const is used, Javascript doesn't allow for reassignment.
 ```
-const name = 'taylor swift'
+const name = 'Taylor Swift'
+name = 'Kanye West';
+//output: Uncaught TypeError: Assignment to constant variable.
 ```
 
 #### let
@@ -44,8 +46,42 @@ var favoriteDrink = 'milk tea';
 
 To see an in-depth answer on the difference between let and var, see the FAQ.
 
-
 ### Strings
+
+Strings in Javascript are expressed through single quotes (' '), double quotes(" "), or back ticks (` `);
+
+#### Single or Double Quotes
+Single quotes and double quotes are basically the same thing. Which one you use is dependant on your code base. Common practice is single quotes for things.
+
+```
+let name = 'Taylor Swift';
+
+console.log('I love ' + name + '.');
+//output: I love Taylor Swift.
+```
+
+#### Template Literals
+Template literals (the back ticks ` `) were introduced in ES2015, allows for more easy manipulation of strings. You can put expressions inside a '${}' inside a template literal for easier usage.
+
+```
+let name = 'Taylor Swift';
+
+console.log(`My favorite singer is ${name}.`)
+output: My favorite singer is Taylor Swift.
+```
+
+#### Escape Notation
+
+Beside regular, printable characters, special characters can be encoded using escape notation:
+
+``` \n ``` new line;
+``` \t ``` tab;
+``` \\ ``` backslash
+``` \" ``` double quote
+``` \' ``` single quote
+
+See full list [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String);
+
 
 ### Numbers
 
@@ -55,7 +91,7 @@ To see an in-depth answer on the difference between let and var, see the FAQ.
 
 ### Objects
 
-### If statements
+### If
 
 ### Loops
 
