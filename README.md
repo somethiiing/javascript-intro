@@ -181,6 +181,55 @@ The following values evaluate to true:
 
 ### Equality
 
+Equality expressions matters in things like `if` statements or `while` Statements.
+
+#### Equals
+
+`===` is the expression for checking if things are equal.
+
+`==` is also usable, but it's abstractly equal, compared to `===` which is strictly equal.
+
+If you're learning how to Javascript, just use `===`. Using `==`, and not knowing what you're doing can cause some very terrible unintended side effects.
+
+To learn more about `==` vs `===`, see the FAQ.
+
+```
+console.log(3 + 2 === 5)
+//Output: true
+console.log(3 + 2 === 6)
+//Output: false
+```
+
+#### Not Equals
+
+The syntax for not equals is `!==`.
+
+```
+console.log(3 + 2 !== 5)
+//Output: false
+console.log(typeof 'foo bar' !== number)
+//Output: true
+```
+
+#### Arithmetic
+- Addition: +
+- Subtraction: -
+- Division: /
+- Multiplication: *
+
+Modulo: % (Returns the remainder). Example:
+```
+console.log(10 % 2)
+//Outputs: 0
+console.log(2 % 10)
+//Outputs: 2
+console.log(11 % 2)
+//Outputs: 1
+```
+
+
+
+
 ### Arrays
 
 ### Objects
@@ -198,7 +247,21 @@ The following values evaluate to true:
 
 ## Functional Programming
 
+### Callbacks
+
+### Each
+
+### Map
+
+### Reduce
+
+### Filter
+
+### Sort
+
 ## Github
+
+## NPM
 
 ## Node
 
@@ -266,3 +329,12 @@ for (let i = 0; i < 5; ++i) {
 ```
 
 let in the loop rebinds it to each iteration of the loop, ensuring it has new value from the previous loop iteration, so it can be used to avoid issue with closures.
+
+
+### == vs ===
+
+Double Equal is known as abstractly equal. Where as triple equal is known as strictly equal.
+
+
+## Todo
+- Call/Bind/Apply/This
