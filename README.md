@@ -123,6 +123,9 @@ console.log(typeof NaN);
 outputs: number
 ```
 
+#### Infinity or Negative Infinity
+Infinity and Negative Infinite are expressed through ```Infinity``` or ```-Infinity``` , respectively.
+
 #### Converting to Number
 
 You can convert something to a number by using the ```Number(var)``` function.
@@ -141,7 +144,35 @@ console.log(Number(name));
 
 ```
 
-### Falsey
+### Truthy and Falsey
+
+#### Falsey
+
+The following values evaluate to false:
+- false
+- null
+- undefined
+- 0
+- NaN
+- ' '
+- " "
+
+#### Truthy
+
+Numbers that are non-zero, empty Object or Arrays, non-empty strings, new Dates equate to truthy.
+
+The following values evaluate to true:
+- true
+- {}
+- []
+- 42
+- 'foo'
+- new Date()
+- -42
+- 3.14
+- -3.14
+- Infinity
+- -Infinity
 
 ### Equality
 
@@ -161,6 +192,8 @@ console.log(Number(name));
 
 
 ## Functional Programming
+
+## Github
 
 ## Node
 
