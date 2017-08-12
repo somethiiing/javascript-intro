@@ -48,7 +48,7 @@ To see an in-depth answer on the difference between let and var, see the FAQ.
 
 ### Strings
 
-Strings in Javascript are expressed through single quotes (' '), double quotes(" "), or back ticks (` `);
+Strings in Javascript are expressed through single quotes (' '), double quotes(" "), or back ticks (``` ` ` ```);
 
 #### Single or Double Quotes
 Single quotes and double quotes are basically the same thing. Which one you use is dependant on your code base. Common practice is single quotes for things.
