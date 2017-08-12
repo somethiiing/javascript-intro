@@ -5,6 +5,11 @@
 - [Introduction](#intro)
 - [Basics](#basics)
 - [Functions](#functional-programming)
+- [Github](#github)
+- [Node](#node)
+- [Angular](#angular)
+- [React](#react)
+- [FAQs](#faqs)
 
 ## Intro
 
