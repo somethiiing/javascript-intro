@@ -74,18 +74,76 @@ output: My favorite singer is Taylor Swift.
 
 Beside regular, printable characters, special characters can be encoded using escape notation:
 
-``` \n ``` new line;
-``` \t ``` tab;
-``` \\ ``` backslash
-``` \" ``` double quote
-``` \' ``` single quote
+- ``` \n ``` new line
+- ``` \t ``` tab
+- ``` \\ ``` backslash
+- ``` \" ``` double quote
+- ``` \' ``` single quote
 
-See full list [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String);
+See full list [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
+
+#### Converting to String
+
+You can convert something to a string by using the ```String(var)``` function.
+
+Usage:
+```
+let numbers = 12345;
+let stringified = String(numbers);
+console.log('The type of numbers is ', typeof numbers);
+console.log('The type of stringified is ', typeof stringified);
+```
 
 
 ### Numbers
 
+Numbers in Javasript are assigned when you have just numbers in the expression.
+*NOTE: numbers in single or double quotes are strings (as in a stringified number)*
+
+```
+let age = 25;
+
+let stringifiedAge = '25';
+
+console.log(age);
+console.log(stringifiedAge);
+console.log(age === stringifiedAge);
+//outputs:
+// 25
+// 25
+// false
+```
+
+#### NaN (Not a Number)
+
+NaN is part of the Number prototype, but is returned when something isn't convertible into a Number.
+
+```
+console.log(typeof NaN);
+outputs: number
+```
+
+#### Converting to Number
+
+You can convert something to a number by using the ```Number(var)``` function.
+If can't convert, returns NaN;
+
+```
+let string = '12345';
+let name = 'Taylor Swift';
+
+console.log(Number(string));
+console.log(Number(name));
+
+//outputs:
+// 12345
+// NaN
+
+```
+
 ### Falsey
+
+### Equality
 
 ### Arrays
 
@@ -99,9 +157,16 @@ See full list [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 
 
 
+
+
+
 ## Functional Programming
 
 ## Node
+
+## Angular 2
+
+## React
 
 ## FAQs
 
