@@ -208,7 +208,7 @@ Numbers have methods too, just like strings do. Some of these are:
 However, when doing many number and Math related things, Javascript has a Math object that has many premade methods for easy math-ing! Some of these are:
 
 - Math.PI
-- Math.Round()
+- Math.round()
 - Math.sqrt()
 - Math.abs()
 - Math.ceil()
