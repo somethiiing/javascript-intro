@@ -4,6 +4,7 @@
 
 - [Introduction](#intro)
 - [Basics](#basics)
+- [Getting Started](#getting-started)
 - [Functions](#functional-programming)
 - [Github](#github)
 - [Node](#node)
@@ -15,6 +16,35 @@
 ## Intro
 
 Javascript is an object-oriented programming language commonly used to create interactive effects within web browsers. With the addition of Node, Javascript is also used fairly often on the back-end as well. Javascript is a high-level, dynamic, weakly-typed, object-based, multi-paradigmed, and interpreted programming language. Along with HTML and CSS, Javascript is one of the three core technologies of World Wide Web content production.
+
+## Getting Started
+
+My recommended browser for Javascript + testing is Google Chrome. Chrome uses the V8 engine which Node is built from and overall, probably has some of the best dev tools for Javascripting.
+
+### Text Editors
+It doesn't really matter what you use. Just pick one and modify it. There's plenty of plugins for each one to let you do whatever customizations that you want.
+
+Some Text Editors:
+- Sublime Text
+- Atom
+- IntelliJ
+- WebStorm
+- VIM
+- VS Code
+
+One recommendation if you plan on using Angular is to use VS Code. VS Code is developed by Microsoft (the same company that develops Typescript) and it has the best Typescript support out of the box.
+
+### Running Code Locally
+I recommend a Mac (not a PC) for web development. If you're on a Mac, getting started is fairly simple.
+1. Install homebrew: https://brew.sh/
+2. Install NodeJS/NPM: `brew install node` OR (SOME PEOPLE HIGHLY RECOMMEND USING NODE VERSION MANAGER; Do one or the other. Not both.) [Node Version Manager](https://github.com/creationix/nvm)
+3. Now you can run your code by running `node [filename].js` in your terminal. If you have any console.logs, it will show up in the terminal.
+
+### Testing your code
+1. Open up Google Chrome.
+2. Open up the Dev Tools (either through the options or hotkeys). Windows: ctrl + shift + i. Mac: command + shift + i
+3. Go to the Console tab.
+4. Test your code!
 
 ## Basics
 
@@ -611,7 +641,7 @@ greet();
 //Outputs: hello world
 ```
 
-In order to get something back from a function, you have to `return` it.
+##### In order to get something back from a function, you have to `return` it.
 
 ```
 let a = 5;
@@ -625,7 +655,7 @@ console.log(addition(a, b));
 // Outputs 8
 ```
 
-*NOTE: If you don't return it, this is what happens:*
+##### If you don't return it, this is what happens:
 ```
 let a = 5;
 let b = 3;
@@ -638,7 +668,7 @@ console.log(addition(a, b));
 // Outputs undefined
 ```
 
-*NOTE2: You don't always have to return something. Sometimes you're modifying something with the function*
+##### You don't always have to return something. Sometimes you're modifying something with the function
 ```
 let a = 5;
 let addFiveToA = () => {
@@ -658,7 +688,7 @@ console.log(a);
 
 ```
 
-You can also assign the output of a function to a variable.
+##### You can also assign the output of a function to a variable.
 ```
 let name = 'Taylor Swift';
 let nameExclaimer = str => {
@@ -716,7 +746,21 @@ console.log(nameExclaimer(person2));
 
 ```
 
+#### Examples
 
+toCelsius = fahrenheit => {
+    return (5/9) * (fahrenheit-32);
+};
+
+multiply = (num1, num2) => {
+  return a * b;
+};
+
+logAll = array => {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+};
 
 
 ### Try // Catch
@@ -878,3 +922,6 @@ Long story short, don't use `==`. Just use `===` to be able to control what you 
 - Instantiation Patterns
 - Hoisting
 - Immutable Data Structures
+- Getting Started: Console.
+- Dev Tools
+- TDD
