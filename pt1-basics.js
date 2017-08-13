@@ -1,0 +1,66 @@
+/*
+Welcome to the beginning of this Javascript crash course.  This first part is only testing the basics so it should be fairly easy.
+I'm hoping things will get harder (and more challenging!) as you move further through the course.
+
+READ ME FIRST:
+
+Whenever you see //CODE// //CODE// //CODE//, delete that code and write your code there.
+Follow the instructions and stop when you see a giant code block that tells you to stop.
+When you're done with the entire lesson, run the code in Node.
+
+
+
+
+
+Chapter 1: The Basics.
+Here we're gonna work on basic Javascript syntax. Most of these will be simple variable assignments.
+
+Part 1: Strings:                                                                                                                            */
+
+// 1A. Using a 'let' statement, define the variable 'color' with your favorite color!
+//CODE// //CODE// //CODE//
+
+// 1B. Define the variable 'food' with your favorite food. Make it so this variable assignment cannot change.
+//CODE// //CODE// //CODE//
+
+// 1C. Use the code below. Make it all caps and assign it to a variable evenHappier.
+const happy = 'i am super excited'
+//CODE// //CODE// //CODE//
+
+// 1D. Using a method, remove all the extra spaces on the variable extraSpaces and assign it to variable noExtraSpaces
+const extraSpaces = '      so many extra spaces. DansGame.       ';
+//CODE// //CODE// //CODE//
+
+// 1E. Using a method or methods, remove all periods and replace them with spaces. There are two ways to do this. We can call this properSpaces1 and properSpaces2.
+const improperSpaces = 'please.turn.these.periods.into.spaces.'
+//CODE// //CODE// //CODE//
+//CODE// //CODE// //CODE//
+
+
+
+
+/*
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
+*/
+
+//Strings
+let color = 'blue';
+const food = 'steak';
+let evenHappier = happy.toUpperCase();
+let noExtraSpaces = extraSpaces.trim();
+let properSpaces1 = improperSpaces.split('.').join(' ');
+let properSpaces2 = improperSpaces.replace('.', ' ');
