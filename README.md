@@ -750,7 +750,7 @@ console.log(nameExclaimer(person2));
 ```
 
 #### Examples
-
+```
 toCelsius = fahrenheit => {
     return (5/9) * (fahrenheit-32);
 };
@@ -764,7 +764,7 @@ logAll = array => {
     console.log(array[i]);
   }
 };
-
+```
 
 ### Try // Catch
 
