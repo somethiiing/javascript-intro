@@ -594,6 +594,131 @@ for (let i = 0; i < 5; i++) {
 
 ### Functions
 
+- A JavaScript function is a block of code designed to perform a particular task. The function is executed when "something" invokes it (calls it).
+- Functions reuse code: Define the code once, and use it many times. Use different arguments to produce different results.
+- Function parameters are the names listed in the function definition.
+- Function arguments are the real values received by the function when it is invoked.
+- Functions are invoked with ().
+
+Example:
+```
+let greet = () => {
+  console.log('hello world');
+}
+
+// function invoking
+greet();
+//Outputs: hello world
+```
+
+In order to get something back from a function, you have to `return` it.
+
+```
+let a = 5;
+let b = 3;
+
+let addition = (num1, num2) => {
+  return num1 + num2;
+}
+
+console.log(addition(a, b));
+// Outputs 8
+```
+
+*NOTE: If you don't return it, this is what happens:*
+```
+let a = 5;
+let b = 3;
+
+let addition = (num1, num2) => {
+  num1 + num2;
+}
+
+console.log(addition(a, b));
+// Outputs undefined
+```
+
+*NOTE2: You don't always have to return something. Sometimes you're modifying something with the function*
+```
+let a = 5;
+let addFiveToA = () => {
+  a = a + 5;
+}
+
+console.log(a);
+addFiveToA();
+console.log(a);
+addFiveToA();
+console.log(a);
+
+//Outputs:
+// 5
+// 10
+// 15
+
+```
+
+You can also assign the output of a function to a variable.
+```
+let name = 'Taylor Swift';
+let nameExclaimer = str => {
+  return str + '!!!';
+}
+
+let happyName = nameExclaimer(name);
+console.log(happyName);
+//Output:
+// Taylor Swift!!!
+
+```
+
+
+#### Creating Functions
+Three different ways to make a function. The first one looks weird, but it's a new thing in ES2015 called arrow functions. All three of these functions are usable. But common practice is to use the arrow functions. There are reasons to use the other two. But that will be covered later. Look in FAQ for 'hoisting'.
+
+```
+let name = (parameter1, parameter2, parameter3) => {
+  // code to be executed
+}
+```
+
+```
+let name = function (parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+```
+
+```
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+```
+
+
+#### Random Notes:
+
+In an arrow function, if there is only one parameter, you don't need the parenthesis. If there is zero or 2+ parameters, you do.
+```
+// one parameter:
+let person1 = 'Taylor Swift';
+let person2 = 'Katy Perry';
+
+let nameExclaimer = name => {
+  return name + '!!!';
+};
+
+console.log(nameExclaimer(person1));
+console.log(nameExclaimer(person2));
+
+//Output:
+// Taylor Swift!!!
+// Katy Perry!!!
+
+```
+
+
+
+
 ### Try // Catch
 
 Todo.
@@ -726,6 +851,10 @@ console.log(true == 'true'); // false. A string will not be converted to a boole
 console.log(true === 'true'); // false
 ```
 
+### Hoisting
+
+Todo
+
 #### Other Random Things
 String literals are different than String objects.
 ```
@@ -748,3 +877,4 @@ Long story short, don't use `==`. Just use `===` to be able to control what you 
 - Try // Catch
 - Instantiation Patterns
 - Hoisting
+- Immutable Data Structures
