@@ -390,7 +390,54 @@ console.log(taylorSwift.fullName())
 
 ```
 
-### If
+### Conditionals
+
+Sometimes in functions or other situations, you need to run code depending on a conditional.
+Where the conditional is, you can put an expression and it will evaluate it, then run the check. See Truthy or Falsey.
+
+#### if
+
+```
+if (conditional) {
+  // run this code
+}
+```
+
+#### else
+
+```
+if (conditional) {
+  // run this code
+} else {
+  // otherwise, run this code
+}
+```
+
+#### else if
+
+```
+if (conditional) {
+  // if conditional, run this code
+} else if (otherConditional) {
+  // if otherConditional, run this code
+} else {
+  // otherwise, run this code
+}
+```
+
+#### Example
+```
+let a = 5;
+
+if (a < 10) {
+  console.log('a IS SMALL!');
+} else {
+  console.log('a IS BIG!);
+}
+
+//Outputs: a IS SMALL
+```
+
 
 ### Loops
 
