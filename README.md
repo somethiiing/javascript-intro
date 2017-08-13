@@ -328,8 +328,31 @@ console.log(famousPeople[3]);
 //Outputs: Taylor Swift
 //Outputs: Katy Perry
 //Outputs: Rihanna
-
 ```
+
+#### Properties:
+There are certain qualities of the Array object.
+
+- constructor: Returns the function that created the Array object's prototype
+- length: Sets or returns the number of elements in an array
+- prototype: Allows you to add properties and methods to an Array object
+
+#### Methods:
+Like everything else, Arrays have a variety of methods. Here are some commonly used ones:
+
+- Array.isArray();
+- Array.concat();
+- Array.forEach();
+- Array.map();
+- Array.reverse();
+- Array.shift();
+- Array.pop();
+- Array.push();
+- Array.sort();
+- Array.splice();
+- Array.slice();
+
+There are many others. Definitely look into these!
 
 ### Objects
 
