@@ -36,13 +36,16 @@ One recommendation if you plan on using Angular is to use VS Code. VS Code is de
 
 ### Running Code Locally
 I recommend a Mac (not a PC) for web development. If you're on a Mac, getting started is fairly simple.
+
 1. Install homebrew: https://brew.sh/
 2. Install NodeJS/NPM: `brew install node` OR (SOME PEOPLE HIGHLY RECOMMEND USING NODE VERSION MANAGER; Do one or the other. Not both.) [Node Version Manager](https://github.com/creationix/nvm)
 3. Now you can run your code by running `node [filename].js` in your terminal. If you have any console.logs, it will show up in the terminal.
 
 ### Testing your code
 1. Open up Google Chrome.
-2. Open up the Dev Tools (either through the options or hotkeys). Windows: ctrl + shift + i. Mac: command + shift + i
+2. Open up the Dev Tools (either through the options or hotkeys)
+  - Windows: ctrl + shift + i
+  - Mac: command + shift + i
 3. Go to the Console tab.
 4. Test your code!
 
