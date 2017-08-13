@@ -133,6 +133,21 @@ console.log('The type of numbers is ', typeof numbers);
 console.log('The type of stringified is ', typeof stringified);
 ```
 
+#### Methods
+
+String Methods are things that let you change or alter the string. There is a huge list of methods. And I'm not even going to go through them all, as most of them are fairly straightforward. However, I will provide a list of ones I use fairly frequently. If you want to learn more, just google them.
+
+- charAt()
+- concat()
+- includes()
+- indexOf()
+- search()
+- slice()
+- split()
+- toUpperCase()
+- toLowerCase()
+- trim()
+
 
 ### Numbers
 
@@ -182,6 +197,25 @@ console.log(Number(name));
 // NaN
 
 ```
+
+#### Methods
+
+Numbers have methods too, just like strings do. Some of these are:
+- toString()
+- toPrecision()
+- valueOf()
+
+However, when doing many number and Math related things, Javascript has a Math object that has many premade methods for easy math-ing! Some of these are:
+
+- Math.PI
+- Math.Round()
+- Math.sqrt()
+- Math.abs()
+- Math.ceil()
+- Math.floor()
+- Math.min()
+- Math.max()
+- Math.random()
 
 ### Truthy and Falsey
 
@@ -928,3 +962,5 @@ Long story short, don't use `==`. Just use `===` to be able to control what you 
 - Getting Started: Console.
 - Dev Tools
 - TDD
+- Additional links to learn: MDN, NG, React/Redux, W3, etc
+- new Date()
