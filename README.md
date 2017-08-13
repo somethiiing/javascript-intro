@@ -964,3 +964,4 @@ Long story short, don't use `==`. Just use `===` to be able to control what you 
 - TDD
 - Additional links to learn: MDN, NG, React/Redux, W3, etc
 - new Date()
+- || and &&
