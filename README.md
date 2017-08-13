@@ -288,13 +288,107 @@ A primitive data type is data that has a primitive value.
 JavaScript defines 5 types of primitive data types:
 - string
 - number
--  boolean
+- boolean
 - null
 - undefined
 
 Primitive values are immutable (they are hardcoded and therefore cannot be changed).
 
+#### Object Creation
 
+Can create an object as an object literal then adding properties.
+
+```
+let taylorSwift = {}
+taylorSwift.name = 'Taylor Swift';
+taylorSwift.birthday = 'December 13, 1989';
+taylorSwift['occupation'] = 'Singer';
+```
+
+Or can create by instantiating the object with the properties inside.
+
+```
+let seolhyunKim = {
+  name: 'Seolhyun Kim',
+  birthday: 'January 3, 1995',
+  occupation: 'Singer'
+}
+```
+
+#### Properties
+
+Properties on an object are any values associated with a Javascript object. Javascript object is a collection of unordered properties. Properties can be added, changed, and deleted. But some are read-only.
+
+Can add, change, or access properties through dot notation, or bracket notation.
+
+##### Dot Notation
+
+objectName.property
+
+```
+let katyPerry = {
+  name: 'Katy Perry',
+  birthday: 'October 25, 1984'
+}
+// assigning:
+katyPerry.occupation = 'Singer';
+// accessing:
+console.log(katyPerry.name)
+//Outputs: 'Katy Perry'
+```
+
+##### Bracket Notation
+
+objectName['property'] or objectName[expression]
+
+```
+let haleyWilliams = {
+  name: 'Hayley Williams',
+  birthay: 'December 27, 1988'
+};
+// assigning:
+hayleyWilliams['occupation'] = 'Singer';
+// accessing:
+console.log(hayleyWilliams['name'])
+//Outputs: Hayley Williams
+```
+
+Variables can be passed into bracket notation to access or assign properties.
+
+```
+let name = 'name';
+
+let jieunSong = {}
+jieunSong[name] = 'Jieun Song';
+
+console.log(jieunSong[name])
+//Outputs: Jieun Song
+```
+
+#### Methods
+Methods are just functions assigned as a property. Methods have access to properties on the object.
+
+```
+let taylorSwift = {
+  name: 'Taylor Swift',
+  firstName: 'Taylor',
+  lastName: 'Swift',
+  age: '28',
+  greet: () => {
+    console.log(`Hi, my name is ${this.name} and I am ${this.age} years old!`)
+  },
+  fullName: () => {
+    return `${this.firstName} ${this.lastName}`
+  }
+}
+
+taylorSwift.greet()
+//Outputs: Hi, my name is Taylor Swift and I am 28 years old!
+
+console.log(taylorSwift.fullName())
+//Outputs: Taylor Swift
+
+```
 
 ### If
 
@@ -308,11 +402,11 @@ Primitive values are immutable (they are hardcoded and therefore cannot be chang
 
 ### Try // Catch
 
-Todo Later.
+Todo.
 
 ### Switch Statements
 
-Todo Later.
+Todo.
 
 
 
@@ -458,3 +552,4 @@ Long story short, don't use `==`. Just use `===` to be able to control what you 
 - Call/Bind/Apply/This
 - Switch Statements
 - Try // Catch
+- Instantiation Patterns
