@@ -438,12 +438,159 @@ if (a < 10) {
 //Outputs: a IS SMALL
 ```
 
-
 ### Loops
+
+There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times (and it's actually possible that number could be zero).
+
+#### For
+
+A for loop repeats until a specified condition evaluates to false.
+```
+for ([initialExpression]; [condition]; [incrementExpression]) {
+  statement
+}
+```
+
+##### How For Loops Run
+
+1. The initializing expression initialExpression, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
+2. The condition expression is evaluated. If the value of condition is true, the loop statements execute. If the value of condition is false, the for loop terminates. If the condition expression is omitted entirely, the condition is assumed to be true.
+3. The statement executes. To execute multiple statements, use a block statement ({ ... }) to group those statements.
+4. If present, the update expression incrementExpression is executed.
+5. Control returns to step 2.
+
+##### Examples
+Basic Loop
+```
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+//Outputs:
+// 0
+// 1
+// 2
+// 3
+// 4
+```
+
+Looping over Arrays
+```
+let array = ['white', 'blue', 'black', 'red', 'green'];
+
+for (let i = 0; i < array.length; i++) {
+  console.log(`I really like the color ${array[i]}.`);
+};
+//Outputs:
+// I really like the color white.
+// I really like the color blue.
+// I really like the color black.
+// I really like the color red.
+// I really like the color green.
+```
+
+Go backwards!
+```
+for (let i = 10; i > 4; i--) {
+  console.log(i);
+}
+// Outputs:
+// 10
+// 9
+// 8
+// 7
+// 6
+// 5
+```
+
+#### While
+
+A while statement executes its statements as long as a specified condition evaluates to true.
+
+```
+while (condition) {
+  // run this code
+}
+```
+
+###### How While Loops Run
+If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
+
+The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.
+
+###### Examples
+
+```
+let x = 0;
+while (x < 5) {
+  console.log(x);
+  x++;
+}
+//Outputs:
+// 0
+// 1
+// 2
+// 3
+// 4
+```
+
+```
+let x = 0;
+let cont = true;
+while (cont) {
+  console.log(x);
+  x++;
+  if (x === 2) {
+    cont = false;
+  }
+};
+
+//Outputs:
+// 0
+// 1
+```
+
+###### Warning: Be careful of infinite loops
+
+while (true) {
+  console.log('i love steak');
+}
+
+This will go on forever and make you close the process to stop it.
 
 #### Break
 
+Sometimes you need to stop your loop before it's intended stop time. To stop it, we use a break statement.
+
+```
+for (let i = 0; i < 10; i++) {
+  if (i === 2) {
+    break;
+  }
+  console.log(i);
+}
+//Outputs:
+// 0
+// 1
+```
+
 #### Continue
+
+Sometimes you need to break out of an iteration of a loop, but you want it to continue. For this case, we use a continue statement.
+
+```
+for (let i = 0; i < 5; i++) {
+  if (i === 2) {
+    continue
+  }
+  console.log(i);
+}
+
+//Outputs:
+// 0
+// 1
+// 3
+// 4
+```
 
 ### Functions
 
@@ -479,7 +626,7 @@ Todo.
 
 ## Node
 
-## Angular 2
+## Angular
 
 ## React
 
@@ -600,3 +747,4 @@ Long story short, don't use `==`. Just use `===` to be able to control what you 
 - Switch Statements
 - Try // Catch
 - Instantiation Patterns
+- Hoisting
