@@ -312,7 +312,7 @@ In Javascript, nearly everything is an object.
 
 All JavaScript values, except primitives, are objects.
 
-#### Javascript Primatives
+#### Javascript Primitives
 
 A primitive value is a value that has no properties or methods.
 
@@ -338,7 +338,7 @@ taylorSwift.birthday = 'December 13, 1989';
 taylorSwift['occupation'] = 'Singer';
 ```
 
-Or can create by instantiating the object with the properties inside.
+Or can create by instantiating the object with the properties inside. This is also known as an object literal. A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces. Object literals encapsulate data, enclosing it in a tidy package.
 
 ```
 let seolhyunKim = {
