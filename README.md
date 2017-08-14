@@ -785,7 +785,7 @@ console.log(happyName);
 
 
 #### Creating Functions
-Three different ways to make a function. The first one looks weird, but it's a new thing in ES2015 called arrow functions. All three of these functions are usable. But common practice is to use the arrow functions. There are reasons to use the other two. But that will be covered later. Look in FAQ for 'hoisting'.
+Three different ways to make a function. The first one looks weird, but it's a new thing in ES2015 called arrow functions. All three of these functions are usable. But common practice is to use the arrow functions. There are reasons to use the other two. But that will be covered later. For more information, see the [FAQ](#hoisting).
 
 ```
 let name = (parameter1, parameter2, parameter3) => {
