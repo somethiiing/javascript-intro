@@ -77,6 +77,12 @@ const numbersArr = [5, 6, 3, 4, 7, 8, 1, 2];
 // 3F. equality6: Use undefined.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
+// 3G. equality7. Use a && statement.
+//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+
+// 3G. equalit8. Use a || statement.
+//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+
 
 
 // Part 4: Arrays
@@ -142,7 +148,7 @@ const loopObject = {
   vietnamese: 'pho',
   chinese: 'chow mein',
   japanese: 'ramen',
-  korean: 'naengmyun'
+  korean: 'kalgooksu'
 };
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 

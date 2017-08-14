@@ -301,6 +301,18 @@ console.log(3 + 2 === 6)
 //Output: false
 ```
 
+#### Not (!)
+
+The syntax for 'not' is an exclamation mark (!). Sometimes called a 'bang'. When evaluating statements and you want the opposite of what you have evaluated you use an exclamation mark.
+
+```
+console.log(!undefined);
+//Output: true
+```
+
+To learn about what (!!) is, see the [FAQ](#double-bang).
+
+
 #### Not Equals
 
 The syntax for not equals is `!==`.
@@ -310,6 +322,39 @@ console.log(3 + 2 !== 5)
 //Output: false
 console.log(typeof 'foo bar' !== number)
 //Output: true
+```
+
+#### And // Or
+
+##### And: &&
+
+The syntax for 'and' is &&. Which means there will be two expressions connected with the && symbol. Will only return true if BOTH statements are true.
+
+```
+console.log((2 < 3 && 5 > 3));
+//Outputs: true
+```
+
+console.log((2 > 3 && 5 > 3));
+//Outputs: false
+
+#### Or: ||
+
+The syntax for 'or' is ||. Which means two expressions connected with the double pipe, ||. Will return true if either of the statements are true. If both are not true, then will return false.
+
+```
+console.log((2 < 3 || undefined));
+//Outputs: true
+```
+
+```
+console.log(null || undefined);
+//Outputs: false
+```
+
+```
+console.log(null || !undefined);
+//Outputs: false
 ```
 
 #### Arithmetic
@@ -1000,6 +1045,26 @@ console.log(true === 'true'); // false
 
 Todo
 
+### Double Bang (!!)
+
+The double bang syntax is used as shorthang for quickly evaluating whether a value or expression is truthy or falsey.
+The first (!) evaluates it and turns it to the opposite. The second (!) turns it back to the original positive (or negative) value.
+
+```
+console.log(Boolean(undefined));
+//Outputs: false
+
+console.log(!!undefined)
+//Outputs: false
+
+
+console.log(Boolean('positive or negative'));
+//Outputs: true
+
+console.log(!!'positive or negative');
+//Outputs: true
+```
+
 #### Other Random Things
 String literals are different than String objects.
 ```
@@ -1028,4 +1093,4 @@ Long story short, don't use `==`. Just use `===` to be able to control what you 
 - TDD
 - Additional links to learn: MDN, NG, React/Redux, W3, etc
 - new Date()
-- || and &&
+- !! 
