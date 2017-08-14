@@ -871,6 +871,14 @@ Todo.
 ## Functional Programming
 
 ### Callbacks
+A callback function is a function that is both:
+
+- passed as an argument to another function
+- is invoked after some kind of event
+
+Often, for asynchronous events, the callback invokes after the async task finishes.
+
+In terms of functional programming, callbacks are also known as higher-order functions or lambda functions.
 
 ### Each
 
