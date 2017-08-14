@@ -103,13 +103,22 @@ const moreNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // 4F. Add the number -2 and -1 to the front of newNumbers.
 //CODE// //CODE// //CODE//
 
+// 4G. Assign to variable newNumbersLength the length of newNumbers.
+//CODE// //CODE// //CODE//
+
 
 
 
 // Part 5: Objects
+// 5A. Make an empty object literal and assign it to variable 'favorites'.
+// Use dot notation to add the property 'food' and assign it your favorite food.
+// Use dot notation to add the property 'color' and assign it your favorite color.
+// Use bracket notation to add the property 'song' and assign it your favorite song.
+// Use bracket notation to add the property 'quote' and assign it your favorite quote.
 
-
-
+// 5B. Assign to variable 'myself' with an object literal with the following properties.
+// firstName, lastName, dob, age, occupation
+// also include the favorites object with property favorites.
 
 
 
@@ -164,5 +173,20 @@ let someNumbers = moreNumbers.slice(5, 9);
 let newNumbers = moreNumbers.slice(0);
 newNumbers.push(11);
 newNumbers.unshift(-2, -1);
+let newNumbersLength = newNumbers.length;
 
-//
+//Objects
+let favorites = {};
+favorites.food = 'steak';
+favorites.color = 'blue';
+favorites['song'] = 'One - Epik High';
+favorites['quote'] = 'The world ends with you.';
+
+let myself = {
+  firstName: 'Wilson',
+  lastName: 'Yu',
+  age: 25,
+  dob: 'March 29, 1992',
+  occupation: 'Software Engineer',
+  favorites: favorites
+};
