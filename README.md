@@ -148,6 +148,27 @@ String Methods are things that let you change or alter the string. There is a hu
 - toLowerCase()
 - trim()
 
+#### Properties
+
+Strings have properties that let you access specific things about them.
+
+- constructor: returns the strings constructor function.
+- length: returns the strings length.
+- prototypes: lets you add properties and methods to an object.
+
+In addition, you can access the string using bracket notation and passing in an index. Also strings start at a zero-index.
+
+```
+let str = 'i love steak';
+console.log(str[0]);
+//Outputs: i
+console.log(str[2]);
+//Outputs: l
+
+console.log(str.length);
+//Outputs: 12
+```
+
 
 ### Numbers
 
