@@ -120,6 +120,10 @@ const moreNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // firstName, lastName, dob, age, occupation
 // also include the favorites object with property favorites.
 
+// 5C. Add a method to the 'myself' object that logs a greeting with firstName and lastName.
+// Then invoke it.
+//CODE// //CODE// //CODE//
+
 
 
 
@@ -190,3 +194,8 @@ let myself = {
   occupation: 'Software Engineer',
   favorites: favorites
 };
+
+myself.greet = () => {
+  console.log(`Hi, my name is ${this.firstName} ${this.lastName}`)
+};
+myself.greet();
