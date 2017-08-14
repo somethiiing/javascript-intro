@@ -83,7 +83,7 @@ var is very similar to let. But it defines a variable globally, regardless of bl
 var favoriteDrink = 'milk tea';
 ```
 
-To see an in-depth answer on the difference between let and var, see the FAQ.
+To see an in-depth answer on the difference between let and var, see the [FAQ](#var-vs-let).
 
 ### Strings
 
@@ -280,7 +280,7 @@ Equality expressions matters in things like `if` statements or `while` Statement
 
 If you're learning how to Javascript, just use `===`. Using `==`, and not knowing what you're doing can cause some very terrible unintended side effects.
 
-To learn more about `==` vs `===`, see the FAQ.
+To learn more about `==` vs `===`, see the [FAQ](#-vs-).
 
 ```
 console.log(3 + 2 === 5)
