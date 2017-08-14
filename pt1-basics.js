@@ -152,12 +152,32 @@ const loopObject = {
 
 
 
+// Part 7: Functions
+// 7A. Write a function called cube that returns the cube of a number.
+//CODE// //CODE// //CODE//
 
+// 7B. Write a function called reverse that takes in a string as an argument and returns the string reversed.
+//CODE// //CODE// //CODE//
 
+// 7C. Write a function called searchForElement that takes in a array and a key as arguments. find returns true if the key is found, false if not.
+//CODE// //CODE// //CODE//
 
+// 7D. Write a function called each that takes in an array and a callback. For more information on callbacks, look for callback under Functional Programming.
+// Each does not return anything. It applies the callback on three different parameters, each element of the array, each index of the array, and the array as a whole.
+/* Example:
+const functionNumbers = [1, 2, 3, 4, 5];
+each(functionNumbers, (element, index, array) => {
+  console.log(element, index, array);
+});
 
-
-
+Outputs:
+1 0 [1, 2, 3, 4, 5]
+2 1 [1, 2, 3, 4, 5]
+3 2 [1, 2, 3, 4, 5]
+4 3 [1, 2, 3, 4, 5]
+5 4 [1, 2, 3, 4, 5]
+*/
+//CODE// //CODE// //CODE//
 
 
 
@@ -183,76 +203,3 @@ STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP COD
 STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
 */
 
-//Strings
-let color = 'blue';
-const food = 'steak';
-let evenHappier = happy.toUpperCase();
-let noExtraSpaces = extraSpaces.trim();
-let properSpaces1 = improperSpaces.split('.').join(' ');
-let properSpaces2 = improperSpaces.replace('.', ' ');
-
-//Numbers
-let age = 25;
-let numbersMin = Math.min(numbersArr);
-let numbersMax = Math.max(numbersArr);
-let numbersAbs = Math.abs(-47);
-let randomFourDigitNumber = Math.round(Math.random() * 100);
-
-//Equality
-let equality1 = 5 < 10;
-let equality2 = 10 >= 5;
-let equality3 = 3 === 3;
-let equality4 = (3 + 6) === 9;
-let equality5 = !false;
-let equality6 = (!undefined);
-
-//Arrays
-let colorsArray = ['white', 'blue', 'black', 'red', 'green'];
-let favoriteColor = colorsArray[2];
-let reversedNumbers = moreNumbers.reverse();
-let someNumbers = moreNumbers.slice(5, 9);
-let newNumbers = moreNumbers.slice(0);
-newNumbers.push(11);
-newNumbers.unshift(-2, -1);
-let newNumbersLength = newNumbers.length;
-
-//Objects
-let favorites = {};
-favorites.food = 'steak';
-favorites.color = 'blue';
-favorites['song'] = 'One - Epik High';
-favorites['quote'] = 'The world ends with you.';
-
-let myself = {
-  firstName: 'Wilson',
-  lastName: 'Yu',
-  age: 25,
-  dob: 'March 29, 1992',
-  occupation: 'Software Engineer',
-  favorites: favorites
-};
-
-myself.greet = () => {
-  console.log(`Hi, my name is ${this.firstName} ${this.lastName}`)
-};
-myself.greet();
-
-//Loops
-for (let i = 0; i < loopString.length; i++) {
-  console.log(loopString[i]);
-};
-
-for (let i = 0; i < loopArray.length; i++) {
-  console.log(loopArray[i]);
-}
-
-let keys = Object.keys(loopObject);
-for (let i = 0; i < keys.length; i++) {
-  console.log(keys[i], loopObject[keys]);
-}
-
-let counter = 0;
-while (counter < 11) {
-  console.log(counter);
-  counter++
-};
