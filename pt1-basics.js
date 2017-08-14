@@ -8,7 +8,7 @@ Whenever you see //CODE// //CODE// //CODE//, delete that code and write your cod
 Follow the instructions and stop when you see a giant code block that tells you to stop.
 When you're done with the entire lesson, run the code in Node.
 
-
+Try your BEST to use ES6 syntax. Let/Const vs var. Arrow functions, etc.
 
 
 
@@ -128,6 +128,30 @@ const moreNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
 
+// Part 6: Loops
+// 6A. Use a for loop to iterate over the string, 'loopString', and individually print each letter.
+const loopString = 'This string is for looping!';
+//CODE// //CODE// //CODE//
+
+// 6B. Use a for loop to iterate over the array, 'loopArray' and individually print each element.
+const loopArray = ['white', 'blue', 'black', 'red', 'green'];
+//CODE// //CODE// //CODE//
+
+// 6C. Use a for loop to iterate over the object, 'loopObject', and individually print each key and property.
+const loopObject = {
+  vietnamese: 'pho',
+  chinese: 'chow mein',
+  japanese: 'ramen',
+  korean: 'naengmyun'
+};
+//CODE// //CODE// //CODE//
+
+// 6D. Use a while loop to print numbers 1 - 10.
+//CODE// //CODE// //CODE//
+
+
+
+
 /*
 STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
 STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
@@ -199,3 +223,23 @@ myself.greet = () => {
   console.log(`Hi, my name is ${this.firstName} ${this.lastName}`)
 };
 myself.greet();
+
+//Loops
+for (let i = 0; i < loopString.length; i++) {
+  console.log(loopString[i]);
+};
+
+for (let i = 0; i < loopArray.length; i++) {
+  console.log(loopArray[i]);
+}
+
+let keys = Object.keys(loopObject);
+for (let i = 0; i < keys.length; i++) {
+  console.log(keys[i], loopObject[keys]);
+}
+
+let counter = 0;
+while (counter < 11) {
+  console.log(counter);
+  counter++
+};
