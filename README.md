@@ -913,7 +913,15 @@ Todo.
 
 
 
-## Functional Programming
+## Higher Order Functions
+
+This is part of Functional Programming. In other languages, they call these higher order functions, "Lambda Functions". A higher order function is a function that accepts another function as an argument. The function that is passed in is known as a callback. There are built in methods that are higher order functions:
+
+- Array.map
+- Array.reduce
+- Array.sort
+
+As well as some libraries such as underscoreJS provide lots of utility in their higher order functions.
 
 ### Callbacks
 A callback function is a function that is both:
@@ -922,8 +930,6 @@ A callback function is a function that is both:
 - is invoked after some kind of event
 
 Often, for asynchronous events, the callback invokes after the async task finishes.
-
-In terms of functional programming, callbacks are also known as higher-order functions or lambda functions.
 
 ### Each
 
