@@ -44,8 +44,8 @@ const improperSpaces = 'please.turn.these.periods.into.spaces.'
 // 2A. Define a variable 'age', which is your birthday.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
-// 2B. Using Math methods, find the minimum and maximum of the array. Define them in numbersMin and numbersMax;
-const numbersArr = [5, 6, 3, 4, 7, 8, 1, 2];
+// 2B. Using Math methods, find the minimum and maximum of the following numbers. Define them in numbersMin and numbersMax.
+//   5, 6, 3, 4, 7, 8, 1, 2
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
@@ -59,6 +59,8 @@ const numbersArr = [5, 6, 3, 4, 7, 8, 1, 2];
 
 // Part 3: Equality + Truthy/Falsey
 // 3. Assign variables equality1, equality2, etc and make them all true. (This might seem a little convoluted);
+// Example: equality0: Use the greater symbol.
+// equality0 = 2 > 5;
 // 3A. equality1: Use the less symbol.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
@@ -94,22 +96,22 @@ const numbersArr = [5, 6, 3, 4, 7, 8, 1, 2];
 
 // The next challenges will be using the moreNumbers. DO NOT ALTER the array.
 const moreNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// 4C. Use a method to reverse the array and set that to variable reversedNumbers.
+// 4C. Make a new copy of the array and assign it to newNumbers.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
-// 4D. Use a method to return the fifth through 8th (inclusive) and assign it to someNumbers.
+// 4D. Use a method to reverse the array and set that to variable reversedNumbers.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
-// 4E. Make a new copy of the array and assign it to newNumbers.
+// 4E. Use a method to return the fifth through 8th (inclusive) and assign it to someNumbers.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
 // 4F. Add the number 11 to the end of newNumbers.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
-// 4F. Add the number -2 and -1 to the front of newNumbers.
+// 4G. Add the number -2 and -1 to the front of newNumbers.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
-// 4G. Assign to variable newNumbersLength the length of newNumbers.
+// 4H. Assign to variable newNumbersLength the length of newNumbers.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
 
@@ -121,6 +123,10 @@ const moreNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Use dot notation to add the property 'color' and assign it your favorite color.
 // Use bracket notation to add the property 'song' and assign it your favorite song.
 // Use bracket notation to add the property 'quote' and assign it your favorite quote.
+//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+
+
 
 // 5B. Assign to variable 'myself' with an object literal with the following properties.
 // firstName, lastName, dob, age, occupation
