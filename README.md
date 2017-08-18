@@ -18,7 +18,6 @@
   - [Try // Catch](#try--catch)
   - [Switch Statements](#switch-statements)
 - [Functions](#functional-programming)
-- [Github](#github)
 - [Node](#node)
 - [Angular](#angular)
 - [React](#react)
@@ -27,10 +26,33 @@
 
 ## Intro
 
+This course is meant to quickly onboard someone from nearly no computer knowledge to making a simple webpage using modern frameworks. This course will try to walk through everything from the basics of Javascript to making a Node server, to making a front-end using React or Angular.
+
+### How to Use this Repo
+
+This repo was made to be sort of interactive. And I think following specific steps will produce the best outcome. So refer to this section whenever you finish each bullet point and try to follow the instructions in each part.
+
+1. Get set up locally. [Running Code Locally](#running-code-locally)
+2. Do the basics of [Code School](www.codeschool.com) or [Codecademy](www.codecademy.com)
+  - While you do the Code School/Codecademy follow along in the [Basics](#basics) section of this readme.
+  - If you have trouble, use the [Basics](#basics) to clarify.
+  - Or Google! MDN, or W3Schools will be your best friends.
+3. After you finished reading the basics, open up pt1-basics.js and start coding!
+  - Parts 1 - 7, feel free to reference the [Basics](#basics) section if you need any help.
+  - Don't forget to run/test your code!
+  - But, for Part 8, try your absolute best to not reference anything (or look anything up). This is intended to build on top of each other.
+  - If you get stuck, timebox yourself. Set a timer for 20 minutes: If you're still stuck after 20 minutes of working on it, then look it up.
+  - As an engineer, you're going to need to solve your problems. Googling answers is a skill, yes. But not very beneficial for the long run.
+4. Open up pt2-higherOrderFunctions.js, and work on that!
+5. COMING SOON.
+
+
+### What is Javascript?
 Javascript is an object-oriented programming language commonly used to create interactive effects within web browsers. With the addition of Node, Javascript is also used fairly often on the back-end as well. Javascript is a high-level, dynamic, weakly-typed, object-based, multi-paradigmed, and interpreted programming language. Along with HTML and CSS, Javascript is one of the three core technologies of World Wide Web content production.
 
 ## Getting Started
 
+### Browsers
 My recommended browser for Javascript + testing is Google Chrome. Chrome uses the V8 engine which Node is built from and overall, probably has some of the best dev tools for Javascripting.
 
 ### Text Editors
@@ -52,6 +74,8 @@ I recommend a Mac (not a PC) for web development. If you're on a Mac, getting st
 1. Install homebrew: https://brew.sh/
 2. Install NodeJS/NPM: `brew install node` OR (SOME PEOPLE HIGHLY RECOMMEND USING NODE VERSION MANAGER; Do one or the other. Not both.) [Node Version Manager](https://github.com/creationix/nvm)
 3. Now you can run your code by running `node [filename].js` in your terminal. If you have any console.logs, it will show up in the terminal.
+4. Install Git on your computer. [link](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+5. Make a [Github](www.github.com) account. Fork this repo to your own account. Then clone your copy of the repo to your local computer.
 
 ### Testing your code
 1. Open up Google Chrome.
@@ -940,8 +964,6 @@ Often, for asynchronous events, the callback invokes after the async task finish
 ### Filter
 
 ### Sort
-
-## Github
 
 ## NPM
 
