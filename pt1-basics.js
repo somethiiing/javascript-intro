@@ -82,7 +82,7 @@ const improperSpaces = 'please.turn.these.periods.into.spaces.'
 // 3G. equality7. Use a && statement.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
-// 3G. equalit8. Use a || statement.
+// 3H. equality8. Use a || statement.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
 
@@ -132,7 +132,7 @@ const moreNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // firstName, lastName, dob, age, occupation
 // also include the favorites object with property favorites.
 
-// 5C. Add a method to the 'myself' object that logs a greeting with firstName and lastName.
+// 5C. Add a method to the 'myself' object called greet that logs a greeting with firstName and lastName.
 // Then invoke it.
 //   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
 
@@ -382,3 +382,80 @@ STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP COD
 STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
 STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE. STOP CODING HERE.
 */
+
+
+
+
+
+
+// Strings
+console.log('STRINGS:');
+console.log('1A:  ', typeof color === 'string', '   color: ', color);
+console.log('1B:  ', typeof food === 'string', '   food: ', food);
+console.log('1C:  ', evenHappier.toUpperCase() === evenHappier, '   evenHappier: ', evenHappier);
+console.log('1D:  ', noExtraSpaces[0] !== ' ', '   noExtraSpaces: ', noExtraSpaces);
+console.log('1E:  ', properSpaces.indexOf('.') === -1, '   properSpaces: ', properSpaces);
+console.log('\n');console.log('\n');console.log('\n');
+
+// Numbers
+console.log('Numbers:');
+console.log('2A:  ', numbersMin === 1, '   numbersMin: ', numbersMin);
+console.log('2B:  ', numbersMax === 8, '   numbersMax: ', numbersMax);
+console.log('2C:  ', numbersAbs === 47, '   numbersAbs: ', numbersAbs);
+console.log('2D:  ', randomFourDigitNumber.toString().length === 4, '   randomFourDigitNumber: ', randomFourDigitNumber);
+console.log('\n');console.log('\n');console.log('\n');
+
+// Equality
+console.log('Equality: ');
+console.log('3A:  ', equality1);
+console.log('3B:  ', equality2);
+console.log('3C:  ', equality3);
+console.log('3D:  ', equality4);
+console.log('3E:  ', equality5);
+console.log('3F:  ', equality6);
+console.log('3G:  ', equality7);
+console.log('3H:  ', equality8);
+console.log('\n');console.log('\n');console.log('\n');
+
+// Arrays
+console.log('Arrays: ');
+console.log('4A:  ', colorsArray.length === 5, '   colorsArray: ', colorsArray);
+console.log('4B:  ', colorsArray[2] === favoriteColor, '   favoriteColor: ', favoriteColor);
+console.log('4C:  ', newNumbers.toString() === [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].toString(), '   newNumbers: ', newNumbers);
+console.log('4D:  ', reversedNumbers.toString() === moreNumbers.slice(0).reverse().toString(), '   reversedNumbers: ', reversedNumbers);
+console.log('4E:  ', someNumbers.toString() === moreNumbers.slice(5, 9).toString(), '   someNumbers: ', someNumbers);
+console.log('4F:  ', newNumbers[newNumbers.length - 1] === 11);
+console.log('4G:  ', newNumbers[0] === -2 && newNumbers[1] === -1);
+console.log('4H:  ', newNumbersLength === 14, '   newNumbersLength: ', newNumbersLength);
+console.log('\n');console.log('\n');console.log('\n');
+
+// Objects
+console.log('Objects: ');
+console.log('5A:  ', !!favorites && !!favorites.food && !!favorites.color && !!favorites.song && !!favorites.quote, '   favorites: ', JSON.stringify(favorites));
+console.log('5B:  ', !!myself && !!myself.firstName && !!myself.lastName && !!myself.age && !!myself.dob && !!myself.occupation && !!myself.favorites, '   myself: ', JSON.stringify(myself));
+console.log('5C:  ', typeof myself.greet === 'function');
+myself.greet();
+console.log('\n');console.log('\n');console.log('\n');
+
+// Loops
+// no tests for loops
+console.log('Loops: ');
+console.log('No tests for loops');
+console.log('\n');console.log('\n');console.log('\n');
+
+// Functions:
+console.log('Functions: ');
+console.log('7A:  ', cube(3) === 27);
+console.log('7B:  ', reverse('abc') === 'cba');
+console.log('7C:  ', searchForElement([1, 2, 3], 2) === true && searchForElement([1, 2, 3], 4) === false );
+console.log('\n');console.log('\n');console.log('\n');
+
+// Putting it all together:
+console.log('Putting it all together: ');
+console.log('each: function? ', typeof each === 'function');
+let eachTest = [1, 2, 3];
+each(eachTest, elem => { return elem * 2 });
+console.log('each: works? ', eachTest.toString() === [2, 4, 6].toString());
+
+
+
