@@ -59,10 +59,9 @@ each(obj, elem => {
 // red 3
 // green 4                                                           */
 
-
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let each = (collection, callback) => {
+    // your code goes here
+};
 
 
 
@@ -92,16 +91,9 @@ map(colors, addExclamationMarks); ===>>> ['white!!!', 'blue!!!', 'black!!!', 're
 Try keeping your code DRY. You already wrote each and know what it does.
 How can you use what you've already written to prevent yourself from writing the same things again?                 */
 
-
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
-
-
-
-
-
+let map = (array, callback) => {
+    // your code goes here
+};
 
 
 
@@ -143,11 +135,9 @@ reduce(numbers, sum, 7) ===>>> 28
 */
 
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
-
+let reduce = (array, callback, start) => {
+    // your code goes here
+};
 
 
 
@@ -167,13 +157,9 @@ and then the mapped array will be reduced using the second callback.
 
                                                                                                                              */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
-
-
-
+let mapReduce = (array, callback1, callback2) => {
+    // your code goes here
+};
 
 
 
@@ -182,25 +168,16 @@ and then the mapped array will be reduced using the second callback.
 
 This time, you're not going to be implementing it. Array.sort() is a native function built into Javascript.
 
-Use it to sort these numbers lowest to highest.
+Assume that everything in the array are either strings or numbers.
+If they're numbers, have it so it sort ascending.
 const nums = [9, 5, 3, 6, 7, 2, 1];
 
-Use it to sort these strings alphabetically.
+If they're strings, have it sort alphabetically.
 const words = ['i', 'really', 'like', 'to', 'eat', 'steak']'
 */
-
-
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
-
-
-
-
-
-
-
+let sort = array => {
+    // your code goes here
+}
 
 
 /*
@@ -224,15 +201,9 @@ pluck(rackets, price) ===>>> [245, 220, 240, 255].
 Once again, do your best to keep your code DRY.                                                                       */
 
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
-
-
-
-
-
+let pluck = (array, key) => {
+    // your code goes here
+};
 
 
 
@@ -247,11 +218,9 @@ merge([1, 2, 3, 4], [5, 6, 7, 8], (a,b) => {
 
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
-
+let merge = (arr1, arr2, cb) => {
+    // your code goes here
+};
 
 
 
@@ -266,9 +235,9 @@ Return a copy of the first array with all instances of the values in the second 
 remove([1, 2, 3, 1, 6], [1, 6]) ===>>> [2, 3]
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let remove = (arr1, arr2) => {
+    // your code goes here
+};
 
 
 
@@ -282,9 +251,9 @@ Unique is a function that will accept an array and return a copy with no duplica
 unique(['tarmogoyf', 'tarmogoyf', 'wasteland', 'jace', 'deathrite', 'jace']) ===>>> ['tarmogoyf', 'wasteland', 'jace', 'deathrite']
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let unique = arr => {
+    // your code goes here
+};
 
 
 
@@ -302,10 +271,9 @@ indexOf([0, 2, 2, 1, 3, 5], 2) ===>>> 1
 indexOf([0, 2, 6, 1, 3, 5], 9) ===>>> -1
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
+let indexOf = (arr, target) => {
+    // your code goes here
+};
 
 
 
@@ -322,9 +290,9 @@ Assume the string is always lowercase.
 letterCount('hello world') ===>>> { h: 1, e: 1, l: 3, o: 2, w: 1, r: 1, d: 1 }
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let letterCount = str => {
+    // your code goes here
+};
 
 
 
@@ -339,9 +307,9 @@ duplicates([1, 2, 3, 4, 1]) ===>>> true
 duplicates([1, 2, 3, 4, 5]) ===>>> false
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let duplicates = arr => {
+    // your code goes here
+};
 
 
 
@@ -363,11 +331,9 @@ let greaterThanFive = elem => {
 filter([1, 2, 3, 4, 5, 6, 7], greaterThanFive) ===>>> [6, 7]
 */
 
-
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
+let filter = (array, callback) => {
+    // your code goes here
+};
 
 
 
@@ -389,12 +355,9 @@ every([6, 7, 8, 9, 10], greaterThanFive) ===>>> true
 every([4, 5, 6, 7, 8, 9, 10], greaterThanFive) ===>>> false
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-
-
-
+let every = (array, callback) => {
+    // your code goes here
+};
 
 
 
@@ -415,9 +378,9 @@ some([4, 5, 6, 7, 8, 9, 10], greaterThanFive) ===>>> true
 some([1, 2, 3, 4], greaterThanFive) ===>>> true
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let some = (array, callback) => {
+    // your code goes here
+};
 
 
 
@@ -429,9 +392,9 @@ Returns an array with things that fail the callback.
 reject([1, 2, 3, 4, 5, 6], num => { return num % 2 == 0; })  ===>>> [1, 3, 5]
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let reject = (array, callback) => {
+    // your code goes here
+};
 
 
 
@@ -442,9 +405,9 @@ ShallowFlatten takes in an array and flattens it one layer deep.
 shallowFlatten([1, [2], [3, [[4]]]])  ===>>> [1, 2, 3, [[4]]];
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let shallowFlatten = array => {
+    // your code goes here
+};
 
 
 
@@ -459,9 +422,9 @@ HINT: You'll need to look into the arguments object. Google 'arguments object ja
 intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]) ===>>> [1, 2]
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let intersection = (arr1, arr2) => {
+    // your code goes here
+};
 
 
 
@@ -474,10 +437,9 @@ Return an array of arrays with each array having the index of elements from each
 zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]) ===>>> [["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]
 */
 
-
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let zip = (arr1, arr2) => {
+    // your code goes here
+};
 
 
 
@@ -497,9 +459,9 @@ Hint: Think about an everyday collection of sorted items that may be sitting in 
 sortedIndex([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8) ===>>> 7
 */
 
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
-//   CODE GOES HERE   // //   CODE GOES HERE   // //   CODE GOES HERE   //
+let sortedIndex = (array, target) => {
+    // your code goes here
+};
 
 
 
@@ -520,3 +482,26 @@ Also, in case you didn't notice many of these functions are native methods to Ja
 In addition, there are libraries such as UnderscoreJS that provide all of these.
 In addition further in your learnings, when you deal with Promises or Observables, you'll be needing to use these as well.
 */
+
+module.exports = {
+    each: each,
+    map: map,
+    reduce: reduce,
+    mapReduce: mapReduce,
+    sort: sort,
+    pluck: pluck,
+    merge: merge,
+    remove: remove,
+    unique: unique,
+    indexOf: indexOf,
+    letterCount: letterCount,
+    duplicates: duplicates,
+    filter: filter,
+    every: every,
+    some: some,
+    reject: reject,
+    shallowFlatten: shallowFlatten,
+    intersection: intersection,
+    zip: zip,
+    sortedIndex: sortedIndex
+};
