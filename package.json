@@ -1,0 +1,29 @@
+{
+  "name": "javascript-intro",
+  "version": "1.0.0",
+  "description": "## Table of Contents",
+  "main": "pt1-basics-solution.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "chai": "^4.1.1"
+  },
+  "devDependencies": {
+    "chai-spies": "^0.7.1",
+    "mocha": "^3.5.0"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somethiiing/javascript-intro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somethiiing/javascript-intro/issues"
+  },
+  "homepage": "https://github.com/somethiiing/javascript-intro#readme"
+}
