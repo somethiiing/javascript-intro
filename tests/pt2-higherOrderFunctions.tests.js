@@ -63,7 +63,7 @@ describe('Part 2: Higher Order Functions', () => {
     it('should iterate over object and should access each key', () => {
       let obj = {a: 'apple', b: 'banana', c: 'carrots'};
       let results = [];
-      _.each(obj, prop => {
+      _.each(obj, (prop, key) => {
         results.push([prop, key]);
       });
       expect(results).to.eql([['apple', 'a'], ['banana', 'b'], ['carrots', 'c']]);
@@ -71,8 +71,8 @@ describe('Part 2: Higher Order Functions', () => {
     it('should iterate over object and should have access to the collection', () => {
       let obj = {a: 'apple', b: 'banana', c: 'carrots'};
       let results = [];
-      _.each(obj, prop => {
-        results.push([prop, key]);
+      _.each(obj, (prop, key, collection) => {
+        results.push([prop, key, collection]);
       });
       expect(results).to.eql([['apple', 'a', {a: 'apple', b: 'banana', c: 'carrots'}], ['banana', 'b', {a: 'apple', b: 'banana', c: 'carrots'}], ['carrots', 'c', {a: 'apple', b: 'banana', c: 'carrots'}]]);
     });
