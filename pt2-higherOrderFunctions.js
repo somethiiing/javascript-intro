@@ -61,9 +61,6 @@ each(obj, elem => {
 
 let each = (collection, callback) => {
     // your code goes here
-    for (let i = 0; i < collection.length; i++) {
-        callback(collection[i], i, collection);
-    }
 };
 
 

@@ -46,7 +46,7 @@ describe('Part 2: Higher Order Functions', () => {
       let results = [];
       letters.someProperty = 'Do not iterate!';
 
-      _.each(letters, function(letter, index, collection) {
+      _.each(letters, (letter, index, collection) => {
         results.push(letter);
       });
 
