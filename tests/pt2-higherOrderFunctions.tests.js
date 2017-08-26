@@ -116,9 +116,9 @@ describe('Part 2: Higher Order Functions', () => {
     it('should be a function', () => {
       expect(typeof _.reduce).to.equal('function');
     });
-    it('should not mutate the input array', function() {
+    it('should not mutate the input array', () => {
       let input = [1,2,3,4,5];
-      let result = _.reduce(input, (memo, item) => {return item});
+      let result = _.reduce(input, (memo, item) => item);
       expect(input).to.eql([1,2,3,4,5])
     });
     it('should invoke the iterator function with arguments (memo, item) in that order', () => {
@@ -157,7 +157,7 @@ describe('Part 2: Higher Order Functions', () => {
       }, 10);
       expect(result).to.equal(4);
     });
-    it('should accept falsy values as a valid memo', () => {
+    it('should accept falsey values as a valid memo', () => {
       // Be careful how you check if a memo has been passed in
       let result = _.reduce([1,2,3], (memo, item) => {
         return memo * item;
@@ -330,48 +330,231 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.indexOf(numbers, 40)).to.equal(1);
     });
   });
+  describe('letterCount', () => {
+    it('should be a function', () => {
+      expect(typeof _.letterCount).to.equal('function');
+    });
+    it('should return an object even if there is an empty string', () => {
+      expect(_.letterCount('')).to.eql({});
+    });
+    it('should should accurately return letter count', () => {
+      expect(_.letterCount('hello world')).to.eql({ h: 1, e: 1, l: 3, o: 2, w: 1, r: 1, d: 1 });
+    });
+    it('should work on punctuations', () => {
+      expect(_.letterCount('!!!:D:D')).to.eql({ '!': 3, ':': 2, 'D': 2 });
+    });
+    it('should differentiate capitalized and lowercased letters', () => {
+      expect(_.letterCount('aaaAAAbbbBBB')).to.eql({ a: 3, A: 3, b: 3, B: 3 });
+    });
+  });
+  describe('duplicates', () => {
+    it('should be a function', () => {
+      expect(typeof _.duplicates).to.equal('function');
+    });
+    it('should return true if passed in an empty array', () => {
+      expect(_.duplicates([])).to.equal(true);
+    });
+    it('should return false when no duplicates', () => {
+      expect(_.duplicates([1, 2, 3, 4])).to.equal(false);
+    });
+    it('should return true when there is duplicates', () => {
+      expect(_.duplicates([1, 2, 3, 1])).to.equal(true);
+    });
+  });
+  describe('filter', () => {
+    it('should be a function', () => {
+      expect(typeof _.filter).to.equal('function');
+    });
+    it('should return all even numbers in an array', () => {
+      let isEven = num => num % 2 === 0;
+      let evens = _.filter([1, 2, 3, 4, 5, 6], isEven);
+      expect(evens).to.eql([2, 4, 6]);
+    });
 
+    it('should return all odd numbers in an array', () => {
+      let isOdd = num =>  num % 2 !== 0;
+      let odds = _.filter([1, 2, 3, 4, 5, 6], isOdd);
+      expect(odds).to.eql([1, 3, 5]);
+    });
 
+    it('should produce a brand new array instead of modifying the input array', () => {
+      let isOdd = num => num % 2 !== 0;
+      let numbers = [1, 2, 3, 4, 5, 6];
+      let evens = _.filter(numbers, isOdd);
+      expect(evens).to.not.equal(numbers);
+    });
+  });
+  describe('every', () => {
+    it('should be a function', () => {
+      expect(typeof _.every).to.equal('function');
+    });
+    it('passes by default for an empty collection', () => {
+      expect(_.every([], val => val)).to.be.true;
+    });
 
+    it('passes for a collection of all-truthy results', () => {
+      expect(_.every([true, {}, 1], val => val)).to.be.true;
+    });
 
+    it('fails for a collection of all-falsey results', () => {
+      expect(_.every([null, 0, undefined], val => val)).to.be.false;
+    });
 
+    it('fails for a collection containing mixed falsey and truthy results', () => {
+      expect(_.every([true, false, 1], val => val)).to.be.false;
+      expect(_.every([1, undefined, true], val => val)).to.be.false;
+    });
 
+    it('should work when provided a collection containing undefined values', () => {
+      expect(_.every([undefined, undefined, undefined], val => val)).to.be.false;
+    });
 
+    it('should cast the result to a boolean', () => {
+      expect(_.every([1], val => val)).to.be.true;
+      expect(_.every([0], val => val)).to.be.false;
+    });
 
+    it('should handle callbacks that manipulate the input', () => {
+      expect(_.every([0, 10, 28], isEven)).to.be.true;
+      expect(_.every([0, 11, 28], isEven)).to.be.false;
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    it('should work when no callback is provided', () => {
+      expect(_.every([true, true, true])).to.be.true;
+      expect(_.every([true, true, false])).to.be.false;
+      expect(_.every([false, false, false])).to.be.false;
+    });
+  });
+  describe('some', () => {
+    it('should be a function', () => {
+      expect(typeof _.some).to.equal('function');
+    });
+    it('should fail by default for an empty collection', () => {
+      expect(_.some([])).to.be.false;
+    });
+    it('should pass for a collection of all-truthy results', () => {
+      expect(_.some([true, {}, 1], val => val)).to.be.true;
+    });
+    it('should fail for a collection of all-falsey results', () => {
+      expect(_.some([null, 0, undefined], val => val)).to.be.false;
+    });
+    it('should pass for a collection containing mixed falsey and truthy results', () => {
+      expect(_.some([true, false, 1], val => val)).to.be.true;
+    });
+    it('should pass for a set containing one truthy value that is a string', () => {
+      expect(_.some([null, 0, 'yes', false], val => val)).to.be.true;
+    });
+    it('should fail for a set containing no matching values', () => {
+      expect(_.some([1, 11, 29], isEven)).to.be.false;
+    });
+    it('should pass for a collection containing one matching value', () => {
+      expect(_.some([1, 10, 29], isEven)).to.be.true;
+    });
+    it('should cast the result to a boolean', () => {
+      expect(_.some([1], val => val)).to.be.true;
+      expect(_.some([0], val => val)).to.be.false;
+    });
+    it('should work when no callback is provided', () => {
+      expect(_.some([true, true, true])).to.be.true;
+      expect(_.some([true, true, false])).to.be.true;
+      expect(_.some([false, false, false])).to.be.false;
+    });
+  });
+  describe('reject', () => {
+    it('should be a function', () => {
+      expect(typeof _.reject).to.equal('function');
+    });
+    it('should reject all even numbers', () => {
+      let isEven = num => num % 2 === 0;
+      let odds = _.reject([1, 2, 3, 4, 5, 6], isEven);
+      expect(odds).to.eql([1, 3, 5]);
+    });
+    it('should reject all odd numbers', () => {
+      let isOdd = num => num % 2 !== 0;
+      let evens = _.reject([1, 2, 3, 4, 5, 6], isOdd);
+      expect(evens).to.eql([2, 4, 6]);
+    });
+    it('should produce a brand new array instead of modifying the input array', () => {
+      let isOdd = num => num % 2 !== 0;
+      let numbers = [1, 2, 3, 4, 5, 6];
+      let evens = _.reject(numbers, isOdd);
+      expect(evens).to.not.equal(numbers);
+    });
+  });
+  describe('shallowFlatten', () => {
+    it('should be a function', () => {
+      expect(typeof _.shallowFlatten).to.equal('function');
+    });
+    it('should return an empty array if passed in an empty array', () => {
+      expect(_.shallowFlatten([])).to.eql([]);
+    });
+    it('can flatten a two dimensional array', () => {
+      let nestedArray = [1, [2], [3], 4];
+      expect(_.flatten(nestedArray)).to.eql([1,2,3,4]);
+    });
+  });
+  describe('intersection', () => {
+    it('should be a function', () => {
+      expect(typeof _.intersection).to.equal('function');
+    });
+    it('should return argument if only one argument is passed in', () => {
+      expect(_.intersection([1, 2, 3])).to.eql([1, 2, 3]);
+    });
+    it('should take the set intersection of two arrays', () => {
+      let stooges = ['moe', 'curly', 'larry'];
+      let leaders = ['moe', 'groucho'];
+      expect(_.intersection(stooges, leaders)).to.eql(['moe']);
+    });
+    it('should take in an arbitrary amount of arguments', () => {
+      let arg = [1, 2];
+      let results = _.intersection(arg, arg, arg, arg, arg, arg, arg, arg, arg);
+      expect(results).to.eql([1, 2]);
+    });
+    it('should not modify the argument arrays', () => {
+      let arg = [1, 2];
+      let arg2 = [1, 2, 3];
+      let result = _.intersection(arg, arg2);
+      expect(arg).to.eql([1, 2]);
+      expect(arg2).to.eql([1, 2, 3]);
+    });
+  });
+  describe('zip', () => {
+    it('should be a function', () => {
+      expect(typeof _.zip).to.equal('function');
+    });
+    it('should return original array if only one argument', () => {
+      expect(_.zip([1, 2, 3])).to.eql([1, 2, 3]);
+    });
+    it('should zip together arrays of different lengths', () => {
+      let names = ['joe', 'moe', 'doe']
+      let ages = [30, 40, 50]
+      let leaders = [true];
+      expect(_.zip(names, ages, leaders)).to.eql([
+        ['joe', 30, true],
+        ['moe', 40, undefined],
+        ['doe', 50, undefined]
+      ]);
+    });
+    it('should take in an arbitrary amount of arguments', () => {
+      let result = _.zip([1], [1], [1], [1], [1]);
+      expect(result).to.eql([1, 1, 1, 1, 1]);
+    });
+  });
+  describe('sortedIndex', () => {
+    it('should be a function', () => {
+      expect(typeof _.sortedIndex).to.equal('function');
+    });
+    it('should return -1 if not found', () => {
+      let arr = [1, 2, 3];
+      expect(_.sortedIndex(arr, 5)).to.eql(-1);
+    });
+    it('should find the right index', () => {
+      let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      expect(_.sortedIndex(arr, 5)).to.eql(5);
+    });
+    it('returns the first index that the target can be found at when there are multiple matches', () => {
+      let numbers = [1, 40, 40, 40, 40, 40, 40, 40, 50, 60, 70];
+      expect(_.sortedIndex(numbers, 40)).to.equal(1);
+    });
+  });
 });
-
-// each
-// map
-// reduce
-// mapReduce
-// sort
-// pluck
-// merge
-// remove
-// unique
-// indexOf
-// letterCount
-// duplicates
-// filter
-// every
-// some
-// reject
-// shallowFlatten
-// intersection
-// zip
-// sortedIndex
-
