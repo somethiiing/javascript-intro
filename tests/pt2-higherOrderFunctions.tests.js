@@ -84,11 +84,8 @@ describe('Part 2: Higher Order Functions', () => {
       });
       expect(iterations).to.eql([ [39, 'length', dresser], [79, 'width', dresser], [127, 'height', dresser] ]);
     });
-
-
-
-
   });
+  
   describe('map', () => {
     it('should be a function', () => {
       expect(typeof _.map).to.equal('function');
@@ -107,12 +104,12 @@ describe('Part 2: Higher Order Functions', () => {
     it('should produce a brand new array instead of modifying the input array', () => {
       let numbers = [1, 2, 3];
       let mappedNumbers = _.map(numbers, elem => {
-        return num;
+        return elem;
       });
       expect(mappedNumbers).to.not.equal(numbers);
     });
   });
-  describe('reduce', () => {
+  xdescribe('reduce', () => {
     it('should be a function', () => {
       expect(typeof _.reduce).to.equal('function');
     });
@@ -178,7 +175,7 @@ describe('Part 2: Higher Order Functions', () => {
     });
 
   });
-  describe('mapReduce', () => {
+  xdescribe('mapReduce', () => {
     it('should be a function', () => {
       expect(typeof _.mapReduce).to.equal('function');
     });
@@ -228,7 +225,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(result).to.eql(12);
     });
   });
-  describe('sort', () => {
+  xdescribe('sort', () => {
     it('should be a function', () => {
       expect(typeof _.sort).to.equal('function');
     });
@@ -242,7 +239,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.sort('c', 'b', 'a')).to.eql(['a', 'b', 'c']);
     });
   });
-  describe('pluck', () => {
+  xdescribe('pluck', () => {
     it('should return values contained at a user-defined property', () => {
       let people = [
         { name: 'joe', age: 20 },
@@ -259,7 +256,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(people).to.eql([{ name: 'joe', age: 20 }, { name: 'moe', age: 30 }]);
     });
   });
-  describe('merge', () => {
+  xdescribe('merge', () => {
     it('should be a function', () => {
       expect(typeof _.merge).to.equal('function');
     });
@@ -273,7 +270,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.merge([1, 2, 3], [2, 4, 6], (elem1, elem2) => elem1 + elem2)).to.eql([3, 6, 9]);
     });
   });
-  describe('remove', () => {
+  xdescribe('remove', () => {
     it('should be a function', () => {
       expect(typeof _.remove).to.equal('function');
     });
@@ -293,7 +290,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.remove(original, [1, 2])).to.eql([3]);
     });
   });
-  describe('unique', () => {
+  xdescribe('unique', () => {
     it('should not mutate the input array', () => {
       let input = [1,2,3,4,5];
       let result = _.unique(input);
@@ -309,7 +306,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(uniqueNumbers).to.not.equal(numbers);
     });
   });
-  describe('indexOf', () => {
+  xdescribe('indexOf', () => {
     it('should be a function', () => {
       expect(typeof _.indexOf).to.equal('function');
     });
@@ -330,7 +327,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.indexOf(numbers, 40)).to.equal(1);
     });
   });
-  describe('letterCount', () => {
+  xdescribe('letterCount', () => {
     it('should be a function', () => {
       expect(typeof _.letterCount).to.equal('function');
     });
@@ -347,7 +344,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.letterCount('aaaAAAbbbBBB')).to.eql({ a: 3, A: 3, b: 3, B: 3 });
     });
   });
-  describe('duplicates', () => {
+  xdescribe('duplicates', () => {
     it('should be a function', () => {
       expect(typeof _.duplicates).to.equal('function');
     });
@@ -361,7 +358,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.duplicates([1, 2, 3, 1])).to.equal(true);
     });
   });
-  describe('filter', () => {
+  xdescribe('filter', () => {
     it('should be a function', () => {
       expect(typeof _.filter).to.equal('function');
     });
@@ -384,7 +381,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(evens).to.not.equal(numbers);
     });
   });
-  describe('every', () => {
+  xdescribe('every', () => {
     it('should be a function', () => {
       expect(typeof _.every).to.equal('function');
     });
@@ -425,7 +422,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.every([false, false, false])).to.be.false;
     });
   });
-  describe('some', () => {
+  xdescribe('some', () => {
     it('should be a function', () => {
       expect(typeof _.some).to.equal('function');
     });
@@ -460,7 +457,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.some([false, false, false])).to.be.false;
     });
   });
-  describe('reject', () => {
+  xdescribe('reject', () => {
     it('should be a function', () => {
       expect(typeof _.reject).to.equal('function');
     });
@@ -481,7 +478,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(evens).to.not.equal(numbers);
     });
   });
-  describe('shallowFlatten', () => {
+  xdescribe('shallowFlatten', () => {
     it('should be a function', () => {
       expect(typeof _.shallowFlatten).to.equal('function');
     });
@@ -493,7 +490,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(_.flatten(nestedArray)).to.eql([1,2,3,4]);
     });
   });
-  describe('intersection', () => {
+  xdescribe('intersection', () => {
     it('should be a function', () => {
       expect(typeof _.intersection).to.equal('function');
     });
@@ -518,7 +515,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(arg2).to.eql([1, 2, 3]);
     });
   });
-  describe('zip', () => {
+  xdescribe('zip', () => {
     it('should be a function', () => {
       expect(typeof _.zip).to.equal('function');
     });
@@ -540,7 +537,7 @@ describe('Part 2: Higher Order Functions', () => {
       expect(result).to.eql([1, 1, 1, 1, 1]);
     });
   });
-  describe('sortedIndex', () => {
+  xdescribe('sortedIndex', () => {
     it('should be a function', () => {
       expect(typeof _.sortedIndex).to.equal('function');
     });

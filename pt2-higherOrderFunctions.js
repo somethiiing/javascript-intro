@@ -60,9 +60,16 @@ each(obj, elem => {
 // green 4                                                           */
 
 let each = (collection, callback) => {
-    // your code goes here
+    if (Array.isArray(collection)) {
+      for (let i = 0; i < collection.length; i++) {
+        callback(collection[i], i, collection);
+      };
+    } else {
+      for (let key in collection) {
+        callback(collection[key], key, collection)
+      }
+    }
 };
-
 
 
 /*
@@ -92,7 +99,11 @@ Try keeping your code DRY. You already wrote each and know what it does.
 How can you use what you've already written to prevent yourself from writing the same things again?                 */
 
 let map = (array, callback) => {
-    // your code goes here
+  let results = [];
+  each( array, (elem, ind, arr) => {
+    results.push(callback(elem, ind, arr));
+  });
+  return results;
 };
 
 
