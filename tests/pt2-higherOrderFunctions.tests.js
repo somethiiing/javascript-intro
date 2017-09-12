@@ -107,7 +107,7 @@ describe('Part 2: Higher Order Functions', () => {
     it('should produce a brand new array instead of modifying the input array', () => {
       let numbers = [1, 2, 3];
       let mappedNumbers = _.map(numbers, elem => {
-        return num;
+        return elem;
       });
       expect(mappedNumbers).to.not.equal(numbers);
     });
