@@ -14,7 +14,9 @@
     "mocha": "^3.5.0"
   },
   "scripts": {
-    "test": "mocha tests"
+    "test": "mocha tests",
+    "test:pt2": "mocha ./tests/pt2-higherOrderFunctions.tests.js",
+    "test:pt3": "mocha ./tests/pt3-algorithms.tests.js"
   },
   "repository": {
     "type": "git",
