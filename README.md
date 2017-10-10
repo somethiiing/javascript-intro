@@ -17,7 +17,9 @@
   - [Functions](#functions)
   - [Try // Catch](#try--catch)
   - [Switch Statements](#switch-statements)
-- [Functions](#functional-programming)
+- [Advanced Basics](#advanced-basics)
+  - [Functions](#functional-programming)
+  - [Algorithms](#algorithms)
 - [Node](#node)
 - [Angular](#angular)
 - [React](#react)
@@ -43,8 +45,12 @@ This repo was made to be sort of interactive. And I think following specific ste
   - But, for Part 8, try your absolute best to not reference anything (or look anything up). This is intended to build on top of each other.
   - If you get stuck, timebox yourself. Set a timer for 20 minutes: If you're still stuck after 20 minutes of working on it, then look it up.
   - As an engineer, you're going to need to solve your problems. Googling answers is a skill, yes. But not very beneficial for the long run.
-4. Open up pt2-higherOrderFunctions.js, and work on that!
-5. COMING SOON.
+4. Open up pt2-higherOrderFunctions.js, and work on that! When you finish, your basics of Javascript should be pretty strong!
+5. Open up pt3-algorithms.js and start working on that.
+  - You don't have to complete all of them to move onto the next section. Just the first three.
+  - Do the first three(3).
+  - Then before you work on this each day, work on one of the algorithms/toy problems.
+6. COMING SOON.
 
 
 ### What is Javascript?
@@ -935,9 +941,9 @@ Todo.
 
 
 
+## Advanced Basics
 
-
-## Higher Order Functions
+### Higher Order Functions
 
 This is part of Functional Programming. In other languages, they call these higher order functions, "Lambda Functions". A higher order function is a function that accepts another function as an argument. The function that is passed in is known as a callback. There are built in methods that are higher order functions:
 
@@ -947,7 +953,7 @@ This is part of Functional Programming. In other languages, they call these high
 
 As well as some libraries such as underscoreJS provide lots of utility in their higher order functions.
 
-### Callbacks
+#### Callbacks
 A callback function is a function that is both:
 
 - passed as an argument to another function
@@ -955,15 +961,34 @@ A callback function is a function that is both:
 
 Often, for asynchronous events, the callback invokes after the async task finishes.
 
-### Each
+### Algorithms
 
-### Map
+Sometimes referred to as toy problems. Basically, exercises to work on to continue building your knowledge and understanding of the language. Algorithms typically present a problem and want you to implement a solution. In my examples, they describe and present the problem as well as give some example answers.
 
-### Reduce
+#### How to solve / Tips
+- Break down the problem.
+- Understand what your end goal is.
+- Sometimes you need to work backwards.
+- console.log your steps if you get stuck.
+- If you get stuck for a long time, just take a break and come back with a refreshed mind!
 
-### Filter
 
-### Sort
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## NPM
 
@@ -989,7 +1014,7 @@ Declared outside any block, both are global.
 
 Unlike var, variables declared with let are not accessible before they are declared in their enclosing block.
 
-Though useful, hoisting posed a major source of error for programmers coming from different background like C,C++,Java...
+Though useful, hoisting posed a major source of error for programmers coming from different background like C, C++ ,Java...
 
 ```
 function letseethediff() {
@@ -1040,6 +1065,73 @@ for (let i = 0; i < 5; ++i) {
 
 let in the loop rebinds it to each iteration of the loop, ensuring it has new value from the previous loop iteration, so it can be used to avoid issue with closures.
 
+#### Hoisting
+
+Variable declarations are essential in any programming language. But Javascript has a little quirk called hoisting that can turn an innocent variable declaration into a subtle bug if you're not aware of it.
+
+Take a look at this code.
+
+```
+
+function test () {
+  var a = 'ayyyy';
+  console.log(a, b, c);
+  var b = 'beeee';
+  var c = 'ceeee';
+}
+
+test();
+```
+
+Logs:
+`ayyyy undefined undefined`
+
+If you're wondering why it's undefined instead of throwing an error saying `b is undefined`, welcome to hoisting.
+
+Hoisting is basically the Javascript interpreter's way of moving all variable and function declarations to the top of the scope.
+
+The code for above is basically doing this:
+```
+function test () {
+  var a;
+  var b;
+  var c;
+
+  a = 'ayyyy';
+  console.log(a, b, c);
+  b = 'beeee';
+  c = 'ceeee';
+}
+
+test();
+```
+
+
+##### Function Hoisting
+
+As mentioned just before, functions are also hoisted. The following code will actually log `ayo`.
+
+```
+foo();
+
+function foo() {
+  console.log('ayo');
+};
+```
+
+But, this code will not.
+Because the foo declaration is hoisted to the top. It is undefined until the assignment happens.
+```
+foo();
+
+var foo = function() {
+  console.log('ayo');
+}
+```
+
+Hoisting is an easy to understand, but often overlooked nuance of the JavaScript language. Without a proper understanding of hoisting, your programs are susceptible to subtle bugs.
+
+
 
 ### == vs ===
 
@@ -1068,10 +1160,6 @@ console.log(undefined === null); // false. Undefined and null are distinct types
 console.log(true == 'true'); // false. A string will not be converted to a boolean and vice versa.
 console.log(true === 'true'); // false
 ```
-
-### Hoisting
-
-Todo
 
 ### Double Bang (!!)
 
@@ -1114,7 +1202,6 @@ Long story short, don't use `==`. Just use `===` to be able to control what you 
 - Switch Statements
 - Try // Catch
 - Instantiation Patterns
-- Hoisting
 - Immutable Data Structures
 - Getting Started: Console.
 - Dev Tools
